@@ -1,0 +1,94 @@
+<!-- my-projects.component.html -->
+
+<main class="sticky-container">
+
+    <!-- Page 1: Introduction -->
+    <section #pageSection id="page-1" class="sticky-page page-one">
+        <div class="content-wrapper text-center">
+            <h1 class="heading-1">Deepak's Projects</h1>
+            <p class="sub-heading">A showcase of ideas turned into reality through design and code.</p>
+            <div class="button-container">
+                <!-- Future: Add call-to-action if needed -->
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" class="scroll-indicator-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Page 2: Featured Projects -->
+    <section #pageSection id="page-2" class="sticky-page page-two">
+        <div class="content-wrapper text-center">
+            <h2 class="heading-2">Featured Projects</h2>
+            <p class="sub-heading">Explore some of the most impactful projects I've built recently.</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">MY Portfolio</h3>
+                        <p class="feature-description">A dynamic portfolio website showcasing my web development projects and design skills.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3 class="feature-title">Vimega (E-Shop Platform)</h3>
+                    <p class="feature-description">Frontend eCommerce platform using javascript, HTML, and CSS.</p>
+                </div>
+            </div>
+            <p></p>
+            <!-- <p style="font-size: xx-large;">created some project for my company which are live like happydost.com</p> -->
+        </div>
+    </section>
+
+    <!-- Page 3: Tools & Technologies -->
+    <section #pageSection id="page-3" class="sticky-page page-three">
+        <div class="content-wrapper text-center">
+            <h2 class="heading-2">Tech Stack</h2>
+            <p class="sub-heading">Tools and frameworks used across projects to craft reliable and performant applications.</p>
+            <div class="process-grid">
+                <div class="process-card">
+                    <span class="process-step">Frontend</span>
+                    <p class="process-description">Angular, HTML5, SCSS, Bootstrap, javascript</p>
+                </div>
+                <div class="process-card">
+                    <span class="process-step">Backend</span>
+                    <p class="process-description">Node.js, Express.js, REST APIs, Java</p>
+                </div>
+                <div class="process-card">
+                    <span class="process-step">Dev Tools</span>
+                    <p class="process-description">Git, Docker, Postman, VSCode, Jenkins, kibana, logstash, NMAP, Puppeteer</p>
+                </div>
+                  <div class="process-card">
+                    <span class="process-step">Database</span>
+                    <p class="process-description">MongoDB, Elasticsearch, SuitCRM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 4: Contact & Connect -->
+    <!-- <section #pageSection id="page-4" class="sticky-page page-four">
+        <div class="content-wrapper text-center">
+            <h2 class="heading-2">Let's Collaborate</h2>
+            <p class="sub-heading">Have a project in mind or want to work together? Reach out below.</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Enter your email" class="email-input">
+                <button type="submit" class="submit-button">Get In Touch</button>
+            </form>
+            <div class="social-links">
+                <a href="https://twitter.com/" target="_blank" class="social-link">Twitter</a>
+                <a href="https://linkedin.com/" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+            </div>
+        </div>
+    </section> -->
+
+</main>
+
+<!-- Progress indicator -->
+<!-- <div class="progress-indicator">
+    <div #dot class="progress-dot" data-page="page-1" (click)="scrollToPage('page-1')"></div>
+    <div #dot class="progress-dot" data-page="page-2" (click)="scrollToPage('page-2')"></div>
+    <div #dot class="progress-dot" data-page="page-3" (click)="scrollToPage('page-3')"></div>
+    <div #dot class="progress-dot" data-page="page-4" (click)="scrollToPage('page-4')"></div>
+</div> -->

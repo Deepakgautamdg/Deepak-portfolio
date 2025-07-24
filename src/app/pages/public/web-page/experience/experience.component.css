@@ -1,0 +1,137 @@
+/* Base styles remain unchanged */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+.main-container {
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+h3 {
+    color: #007bff;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vertical-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #ffffff;
+    z-index: 0;
+}
+
+.work-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 60px 0;
+    width: 100%;
+    flex-wrap: wrap; /* Allow wrapping for narrow viewports */
+    gap: 20px;
+}
+
+.work-item:nth-child(even) {
+    flex-direction: row;
+}
+
+.work-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.work-item .content {
+    width: 40%;
+    color: #ffffff;
+    text-align: justify;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.work-item .date {
+    width: 40%;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.work-item:nth-child(even) .date {
+    text-align: right;
+}
+
+.work-item .image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+}
+
+.work-item .image img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #fefeff;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .work-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .work-item .content,
+    .work-item .date {
+        width: 90%;
+    }
+
+    .work-item .image {
+        position: static;
+        transform: none;
+        margin: 20px 0;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .work-item .content,
+    .work-item .date {
+        font-size: 0.9rem;
+    }
+
+    .work-item .image img {
+        width: 80px;
+    }
+}

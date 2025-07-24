@@ -1,0 +1,120 @@
+/* footer.component.scss */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;  /* Reduced padding */
+  flex-wrap: wrap;
+  font-size: 12px;  /* Reduced font size */
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+}
+
+.footer-middle {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: center;
+  font-size: 250%;
+}
+
+.footer-link {
+  color: white;
+  margin: 0 10px; /* Reduced margin */
+  text-decoration: none;
+  font-weight: 350;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 8px; /* Reduced margin */
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-size: 8px; 
+}
+
+.footer-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: bold;
+  padding: 4px 8px; 
+  font-size: 10px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.user-info-section {
+  display: flex;
+  justify-content: center;  /* Center the items horizontally */
+  align-items: center;      /* Center the items vertically */
+  padding: 20px 0;          /* Add some padding on top and bottom */
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.user-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 15px;   /* Horizontal spacing between items */
+  width: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+.user-info-text{
+  font-size: 10px !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+.user-info-item img {
+  width: 30px;        /* Set the icon size */
+  margin-bottom: 5px; /* Space between icon and text */
+}
+
+.user-info-item p {
+  margin: 0;
+  font-size: 14px;    /* Adjust text size */
+  color: #fff;       /* Text color */
+}
+
+.user-info-item:hover {
+  opacity: 0.7;
+}
+
+.user-info-item:hover img,
+.user-info-item:hover p {
+  color: #f1c40f;  /* Optional: change icon and text color on hover */
+}
+

@@ -1,0 +1,21 @@
+<div class="container" 
+     [class.initialized]="isInitialized"
+     (mouseenter)="slowDownRotation()" 
+     (mouseleave)="restoreRotationSpeed()">
+    <h3>Skills</h3>
+    <svg width="400" height="400" viewBox="-200 -200 400 400">
+      <ng-container *ngFor="let wordStyle of wordStyles; let i = index">
+        <text 
+          [attr.x]="wordStyle.x" 
+          [attr.y]="wordStyle.y" 
+          [attr.opacity]="hoveredIndex === null || hoveredIndex === i ? wordStyle.opacity : 0"
+          [attr.transform]="'scale(' + wordStyle.scale + ')'"
+          [attr.fill]="wordStyle.color" 
+          class="dynamic-text"
+          (mouseenter)="pauseRotation(i)"
+          (mouseleave)="resumeRotation()">
+          {{ wordStyle.word }}
+        </text>
+      </ng-container>
+    </svg>
+</div>

@@ -1,0 +1,127 @@
+.main{
+    margin-top:8%;
+}
+.card-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures responsive wrapping on smaller screens */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.4); /* Darker background for the card */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjust width as per your need */
+    height: 350px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
+    opacity: 1; /* Full opacity for clear visibility */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(228, 17, 17, 0.15);
+}
+
+.card:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.card h3 {
+    color: #dcdcdc; /* Dark white text for the heading */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0; /* Remove extra margins to maintain alignment */
+}
+
+.card p {
+    color: #dcdcdc; /* Dark white text for the paragraph */
+    font-size: 0.9em;
+    margin: 0; /* Remove extra margins to maintain alignment */
+    padding-top: 10px; /* Add spacing between title and paragraph */
+}
+
+.title {
+    margin: 20px 270px; /* Adds some vertical spacing */
+    color: #ffffff; /* White text color for visibility */
+    font-family: 'Arial', sans-serif; /* Ensures a clean and professional font */
+    font-size: 2.5em; /* Adjusts the font size for the main heading */
+    letter-spacing: 1.5px; /* Adds spacing between the letters for a sleek look */
+    position: relative; /* Positions for child elements like the logo */
+}
+
+.title .logo {
+    height: 60px; /* Adjusts the height of the logo */
+    margin-left: 10px; /* Adds spacing between text and the logo */
+    vertical-align: middle; /* Aligns the logo with the text */
+}
+
+.title h1 {
+    display: inline; /* Ensures the text and logo align in a single line */
+    font-weight: bold; /* Makes the heading bold for emphasis */
+    color: #dcdcdc; /* Matches the dark white theme */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+}
+
+
+.button-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url('.././../../../../assets/images/4.png');
+    background-size: cover;
+    background-position: center;
+}
+.button-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url('.././../../../../assets/images/5.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.button-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url('.././../../../../assets/images/7.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.button-4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),url('.././../../../../assets/images/8.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.button-5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('.././../../../../assets/images/main-background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.icons {
+    display: flex; /* Arrange buttons in a single line */
+    justify-content: center;
+    align-items: center; /* Align buttons vertically */
+    margin-top: 25px;
+}
+
+button {
+    background: transparent; /* Transparent background */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 20px; /* Add some spacing */
+}
+
+button img {
+    max-width: 70px; /* Set a maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image doesn't have extra space */
+}
+
+button:hover {
+    opacity: 0.8; /* Slight dimming effect on hover */
+}

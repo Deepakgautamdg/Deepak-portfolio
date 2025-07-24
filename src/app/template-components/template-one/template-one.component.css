@@ -1,0 +1,39 @@
+mat-drawer {
+  width: 205px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer {
+  background: #ffff;
+}
+
+
+main {
+  flex: 1; 
+  overflow: hidden; 
+}
+.template-sidebar {
+  background-color: #062545;
+}
+
+.template-pane {
+  background-color: #f1f3f4;
+}
+
+.template-pane .container {
+  margin-top: 90px;
+}
+
+.page-header-breadcrumb {
+  margin-top: 30px; 
+  margin-bottom: 30px; 
+  color: #263544;
+}
+
+.breadcrumb-url-class {
+  font-weight: 600;
+}

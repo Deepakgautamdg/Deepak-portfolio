@@ -1,0 +1,80 @@
+.black-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2b70b9; /* Change this to your preferred color */
+  color: white;
+}
+
+.black-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.h3heading {
+  margin-left: 35px;
+}
+
+.h3heading h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  color: white;
+  border: 1px solid white; /* Adds a white border */
+  font-size: 16px;
+  padding: 6px 12px; /* Adds some padding for better button size */
+}
+
+.header-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5); /* Optional: Change border color on hover */
+}
+
+/* Keep your existing styles as-is */
+
+@media (max-width: 768px) {
+  .black-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .h3heading {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .d-flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .header-btn {
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h3heading h1 {
+    font-size: 20px;
+  }
+
+  .header-btn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
