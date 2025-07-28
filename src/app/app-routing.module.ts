@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { TemplateOneComponent } from './template-components/template-one/template-one.component';
 import { MainPageComponent } from './pages/public/web-page/main-page/main-page.component';
 import { WebPageComponent } from './pages/public/web-page/web-page.component';
-import { UserService } from './services/user/user.service';
 
 const routes: Routes = [
 
@@ -29,18 +28,6 @@ const routes: Routes = [
   },
 
 
-
-
-  // {
-  //   path: '',
-  //   component: WebPageComponent,
-  // },
-
-
-  // {
-  //   path: 'viewWebsiteHistory',
-  //   component: ViewHistoryComponent,
-  // },
 ];
 
 @NgModule({

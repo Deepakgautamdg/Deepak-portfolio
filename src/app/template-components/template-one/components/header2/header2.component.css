@@ -1,18 +1,17 @@
+/* Base styles */
 .black-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #2b70b9; /* Change this to your preferred color */
+  background-color: #2b70b9;
   color: white;
-}
-
-.black-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensures it stays on top of other content */
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .h3heading {
@@ -28,26 +27,32 @@
 .d-flex {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
+/* Header buttons */
 .header-btn {
   color: white;
-  border: 1px solid white; /* Adds a white border */
+  border: 1px solid white;
   font-size: 16px;
-  padding: 6px 12px; /* Adds some padding for better button size */
+  padding: 6px 12px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s;
 }
 
 .header-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5); /* Optional: Change border color on hover */
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Keep your existing styles as-is */
+/* ---------- Responsive Breakpoints ---------- */
 
+/* Tablet and below */
 @media (max-width: 768px) {
   .black-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 15px;
   }
 
   .h3heading {
@@ -56,7 +61,6 @@
   }
 
   .d-flex {
-    flex-wrap: wrap;
     justify-content: flex-start;
     width: 100%;
     gap: 10px;
@@ -68,6 +72,7 @@
   }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
   .h3heading h1 {
     font-size: 20px;
@@ -76,5 +81,9 @@
   .header-btn {
     font-size: 14px;
     padding: 4px 8px;
+  }
+
+  .black-header {
+    padding: 12px;
   }
 }

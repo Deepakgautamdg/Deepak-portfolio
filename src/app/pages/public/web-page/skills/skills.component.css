@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 800px;
-    width: 800px;
+    /* width: 800px; */
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -34,4 +34,64 @@ svg {
     text-anchor: middle;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .container {
+        height: 600px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    svg {
+        width: 80%;
+        height: 80%;
+    }
+
+    .dynamic-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 500px;
+        padding: 0 10px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    svg {
+        width: 90%;
+        height: 90%;
+    }
+
+    .dynamic-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .dynamic-text {
+        font-size: 12px;
+    }
 }

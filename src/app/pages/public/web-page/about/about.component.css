@@ -4,9 +4,10 @@
   justify-content: space-between;
   gap: 30px;
   margin: 100px auto;
-  margin-top: 200px;
+  margin-top: 100px;
   padding: 30px 20px;
   border-radius: 12px;
+  padding-top: 100px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* background-color: #1e1e1e; */
   color: white;
@@ -150,5 +151,49 @@
   .right-blocks .block1,
   .right-blocks .block2 {
     flex: 1 1 45%;
+  }
+}
+
+/* Additional tweaks for tablet-sized devices */
+@media (max-width: 992px) {
+  .left-blocks {
+    flex: 1 1 100%;
+  }
+
+  .right-blocks {
+    flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .right-blocks .block1,
+  .right-blocks .block2 {
+    flex: 1 1 48%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Handle very small screens (phones < 400px) */
+@media (max-width: 400px) {
+  .right-blocks {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .right-blocks .block1,
+  .right-blocks .block2 {
+    flex: 1 1 100%;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .about-container p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
