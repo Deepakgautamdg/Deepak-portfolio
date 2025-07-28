@@ -7,23 +7,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./header2.component.css']
 })
 export class Header2Component implements OnInit {
+  showMobileMenu = false;
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   navigateTo(sectionId: string) {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu;
   }
 }
 
-
-  // Navigate to specified routes
-  // navigateTo(route: string): void {
-  //   this.router.navigate([route]);
-  // }
-}

@@ -21,8 +21,8 @@ export class SkillsComponent implements OnInit, AfterViewInit {
     color: string;
   }[] = [];
 
-  baseAngleX = 0.01;
-  baseAngleY = 0.01;
+  baseAngleX = 0.02;
+  baseAngleY = 0.02;
   slowAngleX = 0.002;
   slowAngleY = 0.002;
   angleX = this.baseAngleX;
@@ -46,11 +46,27 @@ export class SkillsComponent implements OnInit, AfterViewInit {
     setTimeout(() => this.isInitialized = true, 0);
   }
 
+  // private calculateInitialRadius(): void {
+  //   if (typeof window !== 'undefined') {
+  //     this.radius = Math.min(window.innerWidth, window.innerHeight) / 8;
+  //   }
+  // }
+
   private calculateInitialRadius(): void {
-    if (typeof window !== 'undefined') {
-      this.radius = Math.min(window.innerWidth, window.innerHeight) / 8;
+  if (typeof window !== 'undefined') {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    if (width <= 480) {
+      this.radius = Math.min(width, height) / 3.5; // Increased radius for mobile
+    } else if (width <= 768) {
+      this.radius = Math.min(width, height) / 2.5; // Slightly larger radius for tablets
+    } else {
+      this.radius = Math.min(width, height) / 8; // Default for desktop
     }
   }
+}
+
 
   initializeWords(): void {
     const len = this.words.length;

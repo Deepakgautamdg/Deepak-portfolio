@@ -1,14 +1,24 @@
 <mat-toolbar class="black-header" color="primary">
-
   <div class="h3heading">
-    <h1>Deepak Gautam</h1>
+    <h1 (click)="navigateTo('portfolio')">Deepak Gautam</h1>
   </div>
 
-  <div class="d-flex flex-wrap">
-    <button mat-button class="header-btn me-2" (click)="navigateTo('about')">About</button>
-    <button mat-button class="header-btn me-2" (click)="navigateTo('skills')">Skill</button>
+  <!-- Hamburger icon -->
+  <div class="menu-toggle" (click)="toggleMobileMenu()">
+    <mat-icon>menu</mat-icon>
+  </div>
+
+  <!-- Desktop nav -->
+  <div class="d-flex desktop-menu">
     <button mat-button class="header-btn" (click)="navigateTo('portfolio')">Portfolio</button>
+    <button mat-button class="header-btn" (click)="navigateTo('about')">About</button>
+    <button mat-button class="header-btn" (click)="navigateTo('skills')">Skill</button>
   </div>
-
-
 </mat-toolbar>
+
+<!-- Mobile menu placed OUTSIDE the toolbar -->
+<div class="mobile-menu" *ngIf="showMobileMenu">
+  <button mat-button class="header-btn" (click)="navigateTo('portfolio'); toggleMobileMenu()">Portfolio</button>
+  <button mat-button class="header-btn" (click)="navigateTo('about'); toggleMobileMenu()">About</button>
+  <button mat-button class="header-btn" (click)="navigateTo('skills'); toggleMobileMenu()">Skill</button>
+</div>

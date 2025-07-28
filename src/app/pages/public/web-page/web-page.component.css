@@ -121,6 +121,17 @@
     }
 }
 
+.blinking {
+	animation: blink 2s step-start infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+
 
 
 /* Responsive Styling */
@@ -167,7 +178,7 @@
     #dynamic-text {
         font-size: 28px;
         /* display: block; */
-        text-align: center;
+        /* text-align: center; */
     }
 
     .image img {
@@ -180,6 +191,7 @@
 @media (max-width: 480px) {
     .heading p {
         font-size: 24px;
+        margin-top: 50px;
     }
 
     #dynamic-text {

@@ -277,13 +277,17 @@
 /* Make sticky-page wider on mobile */
 @media (max-width: 767px) {
   .sticky-page {
-    width: 90vw;
+    position: sticky;
+    top: 0;
+    min-height: 70vh;
     height: auto;
-    position: static;
-    margin-bottom: 4rem;
-    box-shadow: none;
+    overflow: visible;
+    width: 90vw;
   }
 
+  .sticky-container{
+    margin-bottom: 200px;
+  }
   .scroll-indicator {
     display: none;
   }
