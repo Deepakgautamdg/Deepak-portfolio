@@ -21,8 +21,8 @@ export class SkillsComponent implements OnInit, AfterViewInit {
     color: string;
   }[] = [];
 
-  baseAngleX = 0.015;
-  baseAngleY = 0.015;
+  baseAngleX = 0.01;
+  baseAngleY = 0.01;
   slowAngleX = 0.002;
   slowAngleY = 0.002;
   angleX = this.baseAngleX;
