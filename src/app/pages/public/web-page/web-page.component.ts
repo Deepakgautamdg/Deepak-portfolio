@@ -11,8 +11,8 @@ export class WebPageComponent implements OnInit {
   dynamicText: string = ''; 
   words: string[] = ['Developer', 'Programmer', 'Technophile', 'Web Developer', 'Software Engineer', 'Tech Enthusiast'];
   currentWordIndex: number = 0;
-  typingSpeed: number = 150;
-  erasingSpeed: number = 75;
+  typingSpeed: number = 170;
+  erasingSpeed: number = 100;
   pauseTime: number = 1000;
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
