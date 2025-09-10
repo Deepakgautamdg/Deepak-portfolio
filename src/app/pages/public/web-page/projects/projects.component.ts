@@ -9,7 +9,6 @@ import { AfterViewInit, ViewChildren, QueryList, ElementRef, Renderer2 } from '@
 })
 export class ProjectsComponent implements OnInit {
 
-
   ngOnInit(): void {
   }
 

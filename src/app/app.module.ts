@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { TemplateOneModule } from './template-components/template-one/template-one.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

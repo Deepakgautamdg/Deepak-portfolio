@@ -1,0 +1,38 @@
+<div class="main-container">
+    <div class="heading">projects</div>
+  <div id="project-container" class="projects">
+
+    <!-- Each project -->
+    <div *ngFor="let project of projects" class="project-wrapper">
+
+      <!-- Project card -->
+      <div class="project-card"
+           [style.backgroundImage]="'url(' + project.imageUrl + ')'"
+           [title]="project.title">
+
+        <!-- Overlay with links -->
+        <div class="overlay">
+          <div class="project-links">
+            <a [href]="project.appUrl" target="_blank" title="Live Application">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a [href]="project.gitUrl" target="_blank" title="GitHub Repository">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project details -->
+      <div class="project-info">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.intro }}</p>
+        <p><strong>Tech Stack:</strong> {{ project.techStack.join(', ') }}</p>
+        <ul>
+          <li *ngFor="let feature of project.features">{{ feature }}</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

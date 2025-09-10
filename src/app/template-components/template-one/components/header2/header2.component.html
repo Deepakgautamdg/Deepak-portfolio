@@ -1,23 +1,29 @@
 <mat-toolbar class="black-header" color="primary">
   <div class="h3heading">
-    <h1 (click)="navigateTo('portfolio')">Deepak Gautam</h1>
+    <h1 routerLink="/" (click)="navigateTo('portfolio')">Deepak Gautam</h1>
   </div>
 
-  <!-- Hamburger icon -->
-  <div class="menu-toggle" (click)="toggleMobileMenu()">
+  <!-- Hamburger icon (only for non-project routes) -->
+  <div class="menu-toggle" *ngIf="!isProjectRoute" (click)="toggleMobileMenu()">
     <mat-icon>menu</mat-icon>
   </div>
 
   <!-- Desktop nav -->
-  <div class="d-flex desktop-menu">
+  <div class="d-flex desktop-menu" *ngIf="!isProjectRoute">
     <button mat-button class="header-btn" (click)="navigateTo('portfolio')">Portfolio</button>
     <button mat-button class="header-btn" (click)="navigateTo('about')">About</button>
+    <button mat-button class="header-btn" (click)="navigateTo('project')">Projects</button>
     <button mat-button class="header-btn" (click)="navigateTo('skills')">Skill</button>
+  </div>
+
+  <!-- Only Home button when on project route -->
+  <div class="d-flex desktop-menu" *ngIf="isProjectRoute">
+    <button mat-button class="header-btn" routerLink="/">Home</button>
   </div>
 </mat-toolbar>
 
-<!-- Mobile menu placed OUTSIDE the toolbar -->
-<div class="mobile-menu" *ngIf="showMobileMenu">
+<!-- Mobile menu -->
+<div class="mobile-menu" *ngIf="showMobileMenu && !isProjectRoute">
   <button mat-button class="header-btn" (click)="navigateTo('portfolio'); toggleMobileMenu()">Portfolio</button>
   <button mat-button class="header-btn" (click)="navigateTo('about'); toggleMobileMenu()">About</button>
   <button mat-button class="header-btn" (click)="navigateTo('skills'); toggleMobileMenu()">Skill</button>

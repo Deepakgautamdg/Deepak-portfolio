@@ -8,9 +8,11 @@ import { ExperienceComponent } from './experience/experience.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { MereProjectsComponent } from './mere-projects/mere-projects.component';
 
 const routes: Routes = [
   { path: '', component: WebPageComponent},
+  { path:'project', component: MereProjectsComponent}
 ];
 
 @NgModule({
@@ -21,6 +23,7 @@ const routes: Routes = [
     AboutComponent,
     SkillsComponent,
     ProjectsComponent,
+    MereProjectsComponent,
   ],
   imports: [
     ReactiveFormsModule,
