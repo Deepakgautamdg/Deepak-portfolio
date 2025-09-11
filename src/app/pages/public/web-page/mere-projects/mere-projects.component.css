@@ -1,14 +1,13 @@
 /* Container */
 .main-container {
-  /* margin-top: 80px; */
   padding: 1rem;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* exactly 2 per row */
+  grid-template-columns: repeat(2, 1fr); /* default 2 per row (desktop) */
   gap: 5rem;
-  padding:5rem 10rem 4rem 10rem;
+  padding: 5rem 10rem 4rem 10rem;
 }
 
 /* Wrapper */
@@ -19,41 +18,39 @@
 }
 
 .heading {
-  margin: 5rem 2rem 0 0;                  /* spacing top & bottom */
-  text-align: center;              /* center align */
-  font-size: 3rem;                 /* big, bold text */
-  font-weight: 700;                /* strong weight */
-  text-transform: uppercase;       /* all caps */
-  color: #dbd9d9;                  /* light gray */
-  letter-spacing: 0.15rem;         /* spacing between letters */
-  position: relative;              /* for underline effect */
+  margin: 5rem 0rem 0 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #dbd9d9;
+  letter-spacing: 0.15rem;
+  position: relative;
 }
 
-/* Optional underline accent */
 .heading::after {
   content: "";
   display: block;
   width: 60px;
   height: 4px;
-  background: #ffce00;             /* accent color */
+  background: #ffce00;
   margin: 0.5rem auto 0 auto;
   border-radius: 2px;
 }
-
 
 /* Project card */
 .project-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;   /* ✅ keeps images proportional */
-  background-size: contain;  /* ✅ full image visible */
+  aspect-ratio: 16 / 9;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f3f3f3; /* fallback bg if image has transparent areas */
+  background-color: #f3f3f3;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -78,7 +75,6 @@
   opacity: 1;
 }
 
-/* Links inside overlay */
 .project-links {
   display: flex;
   gap: 1.25rem;
@@ -109,22 +105,77 @@
   font-weight: bold;
 }
 
-/* Project Features List */
 .project-info ul {
-  list-style-type: disc; /* keeps bullets */
-  padding-left: 1.2rem;  /* spacing from text */
+  list-style-type: disc;
+  padding-left: 1.2rem;
   margin: 0.5rem 0 0 0;
-  text-align: left;       /* align list left for readability */
+  text-align: left;
 }
 
 .project-info li {
   font-size: 0.85rem;
-  color: #aeacac;           /* slightly darker than paragraph */
-  margin-bottom: 0.25rem; /* spacing between features */
+   color: #6e6c6c;
+  margin-bottom: 0.25rem;
 }
-
 
 .project-info p {
   font-size: 0.9rem;
-  color: #6e6c6c;
+  color: #aeacac;
+}
+
+/* ========================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Large tablets & small laptops (≤1200px) */
+@media (max-width: 1200px) {
+  .projects {
+    gap: 3rem;
+    padding: 3rem 5rem;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablets (≤900px) */
+@media (max-width: 900px) {
+  .projects {
+    grid-template-columns: 1fr; /* 1 column */
+    padding: 2rem 3rem;
+    gap: 2.5rem;
+  }
+  .heading {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+  }
+  .project-info h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Phones (≤600px) */
+@media (max-width: 600px) {
+  .projects {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  .heading {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+  .project-info p,
+  .project-info li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small (≤400px) */
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .project-info h3 {
+    font-size: 0.95rem;
+  }
 }

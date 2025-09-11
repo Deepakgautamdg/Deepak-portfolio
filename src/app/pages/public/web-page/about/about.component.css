@@ -97,6 +97,26 @@
   font-weight: bold;
   color: #ffffff;
   text-align: center;
+  text-decoration: none;
+  
+}
+/* Hover effects for block1 & block2 */
+.right-blocks .block1:hover,
+.right-blocks .block2:hover {
+  background-color: #333333; /* slightly lighter than #2a2a2a */
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.35);
+  transition: all 0.3s ease-in-out;
+}
+
+.right-blocks .block1:hover h3,
+.right-blocks .block2:hover h3 {
+  color: #ffffff; /* brighten header */
+}
+
+.right-blocks .block1:hover p,
+.right-blocks .block2:hover p {
+  color: #00bfff; /* invert colors for emphasis */
 }
 
 /* ----------------------------

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-mere-projects',
@@ -6,12 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./mere-projects.component.css']
 })
 export class MereProjectsComponent {
+
+  openGit(project: Project) {
+    if (!project.gitUrl || project.gitUrl.trim() === '') {
+      Swal.fire({
+        icon: 'info',
+        title: 'Private Repository',
+        text: 'The GitHub repository link is not provided because this project was created for my company and the source code cannot be shared.',
+        confirmButtonText: 'OK'
+      });
+    } else {
+      window.open(project.gitUrl, '_blank');
+    }
+  }
+
   projects: Project[] = [
     {
       title: "Portfolio Website",
       imageUrl: "./assets/images/portfolio.jpg",
       appUrl: "https://deepakgautam-ruddy.vercel.app/",
-      gitUrl: "https://github.com/your-username/project-one",
+      gitUrl: "https://github.com/Deepakgautamdg/Deepak-portfolio",
       intro: "A personal portfolio website designed to showcase my skills, projects, and achievements.",
       techStack: ["HTML", "CSS", "Bootstrap", "AngularJS","etc"],
       features: [
@@ -25,10 +40,10 @@ export class MereProjectsComponent {
       imageUrl: "./assets/images/happydost.jpg",
       appUrl: "https://happydost.in",
       gitUrl: "",
-      intro: "A public platform built at Exsete for monitoring website uptime, performance, and security.",
+      intro: "A public platform built at Exsete Consulting Pvt Ltd for monitoring website uptime, performance, and security.",
       techStack: ["HTML", "CSS", "Bootstrap", "AngularJS", "Node.js", "Express.js", "MongoDB", "SuiteCRM", "Elasticsearch","etc"],
       features: [
-        "Developed collaboratively with teammates Afifa and Raja",
+        "Developed collaboratively with my 2 teammates",
         "Integrated Puppeteer, Ping, SSL Check, and Nmap for monitoring",
         "Automated performance checks and real-time issue detection",
         "Efficient data handling with Elasticsearch and SuiteCRM"
@@ -42,7 +57,7 @@ export class MereProjectsComponent {
       intro: "The official website for SYRN, showcasing the enterprise software product.",
       techStack: ["HTML", "CSS", "Bootstrap", "AngularJS","etc"],
       features: [
-        "Built collaboratively with teammate Afifa",
+        "Built collaboratively with my 1 teammate",
         "Implemented unique horizontal scrolling with Locomotive Scroll",
         "Reach Us form integrated with Google Cloud Functions",
         "Leads automatically stored in Google Spreadsheets"
@@ -51,8 +66,8 @@ export class MereProjectsComponent {
     {
       title: "Key Builder – Resume Builder Application (Ongoing Project)",
       imageUrl: "./assets/images/keybuilder.jpg",
-      appUrl: "https://example.com/project-four",
-      gitUrl: "",
+      appUrl: "https://keybuilder.vercel.app",
+      gitUrl: "https://github.com/Deepakgautamdg/resume_builder_frontend",
       intro: "An ongoing independent project: a smart resume-building application.",
       techStack: ["HTML", "CSS", "AngularJS", "Node.js", "Express.js", "MongoDB", "Puppeteer", "ChatGPT APIs", "etc"],
       features: [
@@ -74,5 +89,3 @@ interface Project {
   techStack: string[];
   features: string[];
 }
-
-

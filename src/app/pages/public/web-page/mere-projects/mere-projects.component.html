@@ -16,7 +16,7 @@
             <a [href]="project.appUrl" target="_blank" title="Live Application">
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <a [href]="project.gitUrl" target="_blank" title="GitHub Repository">
+            <a (click)="openGit(project)" title="GitHub Repository">
               <i class="fa-brands fa-github"></i>
             </a>
           </div>

@@ -5,31 +5,6 @@ import { WebPageComponent } from 'src/app/pages/public/web-page/web-page.compone
 import { MainPageComponent } from 'src/app/pages/public/web-page/main-page/main-page.component';
 
 const routes: Routes = [
-  // {
-  //   path: '', component: MainPageComponent
-  // }
-  // ,
-  // {
-  //   path: 'dashboard',
-  //   component: TemplateOneComponent,
-  //   children: [
-  //     {
-  //       path: '',
-  //       loadChildren: () =>
-  //         import('./../../pages/dashboard/dashboard.module').then(
-  //           (m) => m.DashboardModule
-  //         ),
-  //       data: {
-  //         ogUrl: '',
-  //         title: 'Dashboard | Syrn',
-  //         description: '',
-  //         key: '',
-  //         pageTitle: 'Dashboard',
-  //       },
-  //     },
-  //   ],
-  // },
-
 ];
 
 @NgModule({

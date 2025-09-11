@@ -3,8 +3,8 @@
     <h1 routerLink="/" (click)="navigateTo('portfolio')">Deepak Gautam</h1>
   </div>
 
-  <!-- Hamburger icon (only for non-project routes) -->
-  <div class="menu-toggle" *ngIf="!isProjectRoute" (click)="toggleMobileMenu()">
+  <!-- Hamburger icon (always visible on mobile) -->
+  <div class="menu-toggle" (click)="toggleMobileMenu()">
     <mat-icon>menu</mat-icon>
   </div>
 
@@ -22,9 +22,14 @@
   </div>
 </mat-toolbar>
 
-<!-- Mobile menu -->
+<!-- Mobile menu (non-project routes) -->
 <div class="mobile-menu" *ngIf="showMobileMenu && !isProjectRoute">
   <button mat-button class="header-btn" (click)="navigateTo('portfolio'); toggleMobileMenu()">Portfolio</button>
   <button mat-button class="header-btn" (click)="navigateTo('about'); toggleMobileMenu()">About</button>
   <button mat-button class="header-btn" (click)="navigateTo('skills'); toggleMobileMenu()">Skill</button>
+</div>
+
+<!-- Mobile menu (project routes only) -->
+<div class="mobile-menu" *ngIf="showMobileMenu && isProjectRoute">
+  <button mat-button class="header-btn" routerLink="/" (click)="toggleMobileMenu()">Home</button>
 </div>

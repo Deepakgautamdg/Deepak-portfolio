@@ -57,4 +57,12 @@ export class AboutComponent implements AfterViewInit {
 
     observer.observe(element);
   }
+
+  openResume(): void {
+    window.open(
+      'https://drive.google.com/file/d/1_-UEavNLC-put6QET0AkKOI5vd9DWmTY/view?usp=drive_link',
+      '_blank'
+    );
+}
+
 }

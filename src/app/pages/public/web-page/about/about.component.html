@@ -10,17 +10,21 @@
   <p>
     Having worked in a startup environment, I’ve gained hands-on experience with system design and always strive to write clean, maintainable, and optimized code. I thrive on learning new technologies and solving real-world problems through efficient software solutions.
   </p>
-  <button class="btn">Check My Resume</button>
+  <button class="btn" (click)="openResume()">Check My Resume</button>
   </div>
 
     <div class="right-blocks">
+      
 <div class="block1" #leetcodeBlock>
-  <h3>Leetcode</h3>
+  <a target="_blank" href="https://hack.codingblocks.com/app/users/360686">
+    <h3>Leetcode</h3>
   <p>{{ leetcodeCount }}+</p>
+  </a>
 </div>
+
 <div class="block2" #hackerblocksBlock>
-  <h3>Hackerblocks</h3>
-  <p>{{ hackerblocksCount }}+</p>
+  <a target="_blank" href="https://leetcode.com/u/siddhant_deepak/"><h3>Hackerblocks</h3>
+  <p>{{ hackerblocksCount }}+</p></a>
 </div>
 
   </div>
