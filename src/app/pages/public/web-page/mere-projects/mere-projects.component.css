@@ -60,15 +60,21 @@
 }
 
 /* Overlay */
+/* Overlay - always visible */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
-  opacity: 0;
+  opacity: 1; /* ✅ make it visible by default */
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
+}
+
+/* Remove hover effect */
+.project-card:hover .overlay {
+  opacity: 1; /* redundant but ensures no change on hover */
 }
 
 .project-card:hover .overlay {
