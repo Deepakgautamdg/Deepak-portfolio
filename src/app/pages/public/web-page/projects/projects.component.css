@@ -137,34 +137,38 @@
 }
 
 .feature-card {
-  background: #1e1e1e;                 /* card background */
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-/* Hover effect */
-.feature-card:hover {
-  transform: translateY(-8px);         /* lift card */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  background: #242424;                 /* slightly lighter/darker bg */
-}
-
-/* Optional: subtle icon scaling */
-.feature-card:hover .feature-icon {
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
-}
-
-.feature-card {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
     padding: 1.5rem;
     border-radius: 1rem;
     cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background-color 0.3s ease;
 }
+
+/* Hover effect: make it more clickable */
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);   /* slight lift + scale */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);    /* stronger shadow */
+    background-color: rgba(255, 255, 255, 0.15); /* brighter bg */
+    border: 2px solid #ffffff80;                 /* subtle border glow */
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
+}
+
+/* Optional: add subtle pulse animation to indicate interactivity */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.feature-card:active {
+    transform: scale(0.98); /* button press effect */
+}
+
 .feature-icon {
     font-size: 2.25rem;
     margin-bottom: 0.75rem;

@@ -60,7 +60,7 @@ export class AboutComponent implements AfterViewInit {
 
   openResume(): void {
     window.open(
-      'https://drive.google.com/file/d/1_-UEavNLC-put6QET0AkKOI5vd9DWmTY/view?usp=drive_link',
+      'https://drive.google.com/file/d/1qO8IOw5au-qb6nRJHnoHEZvEnsoMy9b1/view?usp=drive_link',
       '_blank'
     );
 }
