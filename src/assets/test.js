@@ -1,6 +1,7 @@
 ; (function (window, document) {
 	// === CONFIGURATION ===
-	const RUM_ENDPOINT = "http://localhost:7200/rum/rum";
+	const RUM_ENDPOINT = "https://dev.exsete.com/syrn_as_service_backend/rum/rum";
+	// const RUM_ENDPOINT = "http://localhost:7200/rum/rum";
 
 	// Extract PROJECT_KEY from <script> tag. This Project key is unique per Customer
 	let PROJECT_KEY = "YOUR_PROJECT_KEY"; // default fallback
