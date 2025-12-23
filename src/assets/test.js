@@ -131,24 +131,32 @@
 	}
 
 
-	function send(payload) {
+	function send(payload, options = {}) {
 		payload.project_key = PROJECT_KEY;
 		payload.environment = getEnvironmentInfo();
+
 		const data = JSON.stringify(payload);
 		const sizeBytes = new Blob([data]).size;
 		console.log("Payload size:", sizeBytes, "bytes");
 
-		if (navigator.sendBeacon) {
+		const useFetch = options.forceFetch === true;
+
+		if (!useFetch && navigator.sendBeacon) {
 			navigator.sendBeacon(RUM_ENDPOINT, data);
 		} else {
 			fetch(RUM_ENDPOINT, {
 				method: "POST",
 				body: data,
-				keepalive: true,
-				headers: { "Content-Type": "application/json" }
+				headers: {
+					"Content-Type": "application/json"
+				},
+				keepalive: true
+			}).catch(err => {
+				console.warn("RUM fetch failed:", err);
 			});
 		}
 	}
+
 
 	// Capture a "pageview" event
 	function trackPageview() {
@@ -342,21 +350,21 @@
         }
     });
 
-    function flushReplayBuffer() {
-        if (replayBuffer.length === 0) return;
+function flushReplayBuffer() {
+	if (replayBuffer.length === 0) return;
 
-        const payload = {
-            type: "session_replay",
-            visitor_id: getVisitorId(),
-            session_id: getSessionId(),
-            url: location.href,
-            timestamp: new Date().toISOString(),
-            events: replayBuffer
-        };
+	const payload = {
+		type: "session_replay",
+		visitor_id: getVisitorId(),
+		session_id: getSessionId(),
+		url: location.href,
+		timestamp: new Date().toISOString(),
+		events: replayBuffer
+	};
 
-        send(payload);
-        replayBuffer = [];
-    }
+	send(payload, { forceFetch: true });
+	replayBuffer = [];
+}
 
     // flush remaining replay data on page unload
     window.addEventListener("beforeunload", flushReplayBuffer);
